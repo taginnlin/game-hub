@@ -1,5 +1,5 @@
 import useData from "./useData"
-import {GameQuery} from "../App";
+import { GameQuery } from "../App";
 
 export interface PlatForm {
   id: number
@@ -15,7 +15,7 @@ export interface Game {
 }
 
 const useGames = (gameQuery: GameQuery) => {
-  const { data, error, isLoading } = useData<Game>('/games', { params: { genres: gameQuery.genre?.id, platforms: gameQuery.platform?.id } }, [gameQuery])
+  const { data, error, isLoading } = useData<Game>('/games', { params: { genres: gameQuery.genre?.id, platforms: gameQuery.platform?.id, ordering: gameQuery.ordering } }, [gameQuery])
 
   return { data, error, isLoading }
 }
