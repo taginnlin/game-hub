@@ -1,6 +1,3 @@
-import { useEffect, useState } from "react"
-import apiClient from "../service/api-client"
-import { CanceledError } from "axios"
 import useData from "./useData"
 
 export interface PlatForm {
@@ -14,11 +11,6 @@ export interface Game {
   background_image: string
   parent_platforms: {platform: PlatForm}[]
   metacritic: number
-}
-
-interface FetchGamesResponse {
-  count: number
-  results: Game[]
 }
 
 const useGames = () => {
