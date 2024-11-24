@@ -1,12 +1,15 @@
 {
   "name": "game-hub",
+  "homepage": "https://taginnlin.github.io/game-hub/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pahes -d dist"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.5.1",
@@ -14,6 +17,7 @@
     "@emotion/styled": "^11.10.6",
     "axios": "^1.7.7",
     "framer-motion": "^10.0.1",
+    "gh-pages": "^6.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1"
