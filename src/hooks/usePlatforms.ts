@@ -7,7 +7,7 @@ export interface Platform {
 }
 
 const usePlatforms = () => {
-  const { data, error, isLoading } = useData('/platforms/lists/parents')
+  const { data, error, isLoading } = useData<Platform>('/platforms/lists/parents')
 
   return {data, error, isLoading}
 }
