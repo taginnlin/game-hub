@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react"
-import apiClient from "../service/api-client"
-import useData from "./useData"
+import genres from "../data/genres"
 
 export interface Genre {
   id: number
@@ -8,10 +6,6 @@ export interface Genre {
   image_background: string
 }
 
-const useGenres = () => {
-  const {data, error, isLoading} = useData<Genre>('genres')
-
-  return { data, error, isLoading }
-}
+const useGenres = () => ({data: genres, error: '', isLoading: false})
 
 export default useGenres
